@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+import Main from '@/views/layout/Main'
+import Home from '@/views/index/Home'
+import Cliente from '@/views/cliente/Cliente'
+import Treinamento from '@/views/treinamento/Treinamento'
 
 Vue.use(Router)
 
@@ -10,8 +14,24 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      component: Main,
+      children: [
+        {
+          path: '/',
+          name: 'Home',
+          component: Home
+        },
+        {
+          path: '/cliente',
+          name: 'Cliente',
+          component: Cliente
+        },
+        {
+          path: '/treinamento',
+          name: 'Treinamento',
+          component: Treinamento
+        }
+      ]
     },
     {
       path: '/about',
