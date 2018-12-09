@@ -4,13 +4,20 @@
       <h1>Cliente</h1>
     </section>
     <section class="content">
+      <DatatableClienteBox />
     </section>
   </div>
 </template>
 
 <script>
-export default {
+import DatatableClienteBox from '@/components/cliente/DatatableClienteBox'
 
+export default {
+  name: 'Cliente',
+
+  components: {
+    DatatableClienteBox
+  }
 }
 </script>
 
