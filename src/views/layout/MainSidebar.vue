@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import slideMenuItems from '@/util/slideMenuItems'
+import slideMenuItems from '@/config/slideMenuItems'
 import VASlideItem from 'va/components/VASlideItem'
 
 export default {
