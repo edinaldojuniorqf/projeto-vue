@@ -6,7 +6,7 @@
 
 <script>
 import VABox from 'va/widgets/VABox'
-import FiltroCliente from '@/components/cliente/FiltroCliente'
+import FiltroCliente from '@/components/cliente/FiltroCliente.container'
 
 export default {
   name: 'FiltroClienteBox',

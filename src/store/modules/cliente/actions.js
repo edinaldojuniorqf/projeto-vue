@@ -5,12 +5,15 @@ export default {
     commit('SET_DATATABLE_LOADING', true)
 
     let { offset, limit, sort, order } = state.datatable.query
+    let { filtro } = state
 
     let params = {
       _start: offset,
       _limit: limit,
       _sort: sort,
-      _order: order
+      _order: order,
+      nome_like: filtro.nome,
+      cpfCnpj_like: filtro.cpfCnpj
     }
 
     await axios.get('clientes', { params }).then(res => {
