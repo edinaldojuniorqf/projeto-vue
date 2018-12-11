@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 import VABox from 'va/widgets/VABox'
 import FiltroCliente from '@/components/cliente/FiltroCliente.container'
 
@@ -14,6 +15,10 @@ export default {
   components: {
     VABox,
     FiltroCliente
+  },
+
+  mounted () {
+    $(this.$el).boxWidget()
   }
 }
 </script>
