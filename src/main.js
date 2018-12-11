@@ -5,6 +5,7 @@ import store from './store'
 import Datatable from 'vue2-datatable-component'
 
 import locale from '@/config/locale/'
+import './config'
 
 import 'va/lib/css'
 
