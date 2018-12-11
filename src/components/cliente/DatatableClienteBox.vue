@@ -25,7 +25,7 @@ export default {
   },
 
   mounted () {
-    $('.box', this.$el).boxWidget()
+    $(this.$el).boxWidget()
   }
 }
 </script>
