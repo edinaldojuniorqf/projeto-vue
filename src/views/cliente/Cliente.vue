@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import DatatableClienteBox from '@/components/cliente/DatatableClienteBox'
+import DatatableClienteBox from '@/components/cliente/DatatableClienteBox.container'
 
 export default {
   name: 'Cliente',

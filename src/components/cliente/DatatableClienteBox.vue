@@ -1,5 +1,5 @@
 <template>
-  <VABox title="Lista de Clientes" :isLoding="false">
+  <VABox title="Lista de Clientes" :isLoading="loading">
     <DatatableCliente slot="content" />
   </VABox>
 </template>
@@ -7,10 +7,17 @@
 <script>
 import $ from 'jquery'
 import VABox from 'va/widgets/VABox'
-import DatatableCliente from '@/components/cliente/DatatableCliente'
+import DatatableCliente from '@/components/cliente/DatatableCliente.container'
 
 export default {
   name: 'DatatableClienteBox',
+
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    }
+  },
 
   components: {
     VABox,

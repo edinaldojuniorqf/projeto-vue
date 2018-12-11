@@ -1,33 +1,52 @@
 <template>
   <div>
-    <datatable v-bind="$data" />
+    <datatable
+      :data="data"
+      :total="total"
+      :query="query"
+      :columns="columns" />
   </div>
 </template>
 
 <script>
-const data = [
-  { nome: 'ATI', cnpj: '23748223432' },
-  { nome: 'AutoForce', cnpj: '234u23489234' }
-]
-
 export default {
   name: 'DatatableCliente',
+
+  props: {
+    data: {
+      type: Array,
+      default () {
+        return []
+      }
+    },
+
+    total: {
+      type: Number,
+      default: 0
+    },
+
+    query: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  },
 
   data () {
     return {
       columns: [
         { title: 'Nome', field: 'nome', sortable: true },
         { title: 'CNPJ', field: 'cnpj' }
-      ],
-      data,
-      total: 0,
-      query: {}
+      ]
     }
   },
 
   watch: {
     query: {
       handler (query) {
+        this.$emit('setDatatableQuery', query)
+        this.$emit('loadDatatable')
       },
       deep: true
     }

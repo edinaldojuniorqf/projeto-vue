@@ -9,6 +9,11 @@
       "id": 2,
       "nome": "Dias Calçados",
       "cnpj": "53.566.966/0001-57"
+    },
+    {
+      "id": 3,
+      "nome": "LXJ",
+      "cnpj": ""
     }
   ]
 }
