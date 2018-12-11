@@ -37,7 +37,7 @@ export default {
     return {
       columns: [
         { title: 'Nome', field: 'nome', sortable: true },
-        { title: 'CNPJ', field: 'cnpj' }
+        { title: 'CPF/CNPJ', field: 'cpfCnpj' }
       ]
     }
   },
