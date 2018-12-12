@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import masks from '@/config/masks'
+import masks from '@/util/masks'
 
 export default {
   name: 'FiltroCliente',
