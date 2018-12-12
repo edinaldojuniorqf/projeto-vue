@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Main from '@/views/layout/Main'
 import Home from '@/views/index/Home'
 import Cliente from '@/views/cliente/Cliente'
+import ClienteCreate from '@/views/cliente/ClienteCreate'
 import Treinamento from '@/views/treinamento/Treinamento'
 
 Vue.use(Router)
@@ -25,6 +26,11 @@ export default new Router({
           path: '/cliente',
           name: 'Cliente',
           component: Cliente
+        },
+        {
+          path: '/cliente/create',
+          name: 'ClienteCreate',
+          component: ClienteCreate
         },
         {
           path: '/treinamento',
