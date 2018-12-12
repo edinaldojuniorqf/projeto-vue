@@ -2,10 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+import locale from '@/config/locale/'
+
+// components
 import Datatable from 'vue2-datatable-component'
 import VueTheMask from 'vue-the-mask'
 import vSelect from 'vue-select'
-import locale from '@/config/locale/'
+import InputTextarea from '@/components/InputTextarea'
 
 // imports js
 import './config'
@@ -20,6 +24,7 @@ Vue.config.productionTip = false
 Vue.use(Datatable, { locale: locale['vue2-datatable-component'] })
 Vue.use(VueTheMask)
 Vue.component('v-select', vSelect)
+Vue.component('input-textarea', InputTextarea)
 
 new Vue({
   router,
