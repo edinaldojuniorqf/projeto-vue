@@ -1,7 +1,15 @@
 <template>
   <div class="Cliente">
-    <section class="content-header">
-      <h1>Cliente</h1>
+    <section class="Cliente__header content-header">
+      <h1>
+        <i class="fa fa-users"></i>
+        Cliente
+      </h1>
+      <div>
+        <button class="btn btn-success" @click="handleNovoClick">
+          Novo
+        </button>
+      </div>
     </section>
     <section class="content">
       <FiltroClienteBox />
@@ -23,6 +31,12 @@ export default {
     DatatableClienteBox
   },
 
+  methods: {
+    handleNovoClick () {
+      this.$router.push({ name: 'ClienteCreate' })
+    }
+  },
+
   mounted () {
     $(this.$el).boxWidget()
   }
@@ -30,5 +44,9 @@ export default {
 </script>
 
 <style>
-
+.Cliente__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
