@@ -1,6 +1,5 @@
 export default {
   'SET_FILTRO' (state, filtro) {
-    console.log(filtro)
     state.filtro = filtro
   },
 
