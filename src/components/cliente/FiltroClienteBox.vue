@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import FilterBox from '@/components/cliente/FilterBox.container'
+import FilterBox from '@/components/filter/FilterBoxCliente.container'
 import masks from '@/util/masks'
 
 export default {
