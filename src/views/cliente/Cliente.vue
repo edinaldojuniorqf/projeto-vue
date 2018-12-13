@@ -1,7 +1,7 @@
 <template>
   <div class="Cliente">
     <Header
-      title="Clinte"
+      title="Cliente"
       icon="fa fa-users">
       <div slot="actions">
         <BtnNew @click.native="handleNewClick">Novo</BtnNew>

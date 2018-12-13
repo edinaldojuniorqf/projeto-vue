@@ -1,7 +1,7 @@
 <template>
   <div class="ClienteCreate">
     <Header
-      title="Clinte"
+      title="Cliente"
       icon="fa fa-users">
       <div slot="actions">
         <BtnBack @click.native="handleVoltarClick">Voltar</BtnBack>
