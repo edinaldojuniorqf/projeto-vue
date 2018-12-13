@@ -19,7 +19,7 @@
 import $ from 'jquery'
 import Header from '@/components/Header'
 import BtnNew from '@/components/btn/BtnNew'
-import FiltroClienteBox from '@/components/cliente/FiltroClienteBox.container'
+import FiltroClienteBox from '@/components/cliente/FiltroClienteBox'
 import DatatableClienteBox from '@/components/cliente/DatatableClienteBox.container'
 
 export default {
