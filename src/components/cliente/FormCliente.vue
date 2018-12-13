@@ -123,6 +123,10 @@ export default {
     }
   },
 
+  created () {
+    this.$emit('setUfs')
+  },
+
   methods: {
     handleSaveClick () {
     },

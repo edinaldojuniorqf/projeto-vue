@@ -7,7 +7,7 @@
 <script>
 import $ from 'jquery'
 import VABox from 'va/widgets/VABox'
-import FormCliente from '@/components/cliente/FormCliente'
+import FormCliente from '@/components/cliente/FormCliente.container'
 
 export default {
   name: 'FormClienteBox',
