@@ -1,4 +1,21 @@
 {
+  "ufs": [
+    {
+      "id": 1,
+      "sigla": "PE",
+      "nome": "Pernambuco"
+    },
+    {
+      "id": 2,
+      "sigla": "RN",
+      "nome": "Rio Grande do Norte"
+    },
+    {
+      "id": 3,
+      "sigla": "PB",
+      "nome": "Paraíba"
+    }
+  ],
   "clientes": [
     {
       "id": 1,
