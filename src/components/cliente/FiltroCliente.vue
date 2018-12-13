@@ -23,31 +23,32 @@
       </div>
 
       <div class="pull-right">
-        <button
-          class="btn btn-primary"
-          @click.prevent="handleFiltrar"
-        >
+        <BtnFilter @click.native.prevent="handleFiltrar">
           Filtrar
-        </button>
+        </BtnFilter>
 
         &nbsp;
 
-        <button
-          class="btn btn-danger"
-          @click.prevent="handleLimpar"
-        >
+        <BtnClear @click.native.prevent="handleLimpar">
           Limpar
-        </button>
+        </BtnClear>
       </div>
     </form>
   </div>
 </template>
 
 <script>
+import BtnFilter from '@/components/btn/BtnFilter'
+import BtnClear from '@/components/btn/BtnClear'
 import masks from '@/util/masks'
 
 export default {
   name: 'FiltroCliente',
+
+  components: {
+    BtnFilter,
+    BtnClear
+  },
 
   props: {
     filtro: {
