@@ -10,6 +10,7 @@ import Datatable from 'vue2-datatable-component'
 import VueTheMask from 'vue-the-mask'
 import vSelect from 'vue-select'
 import InputTextarea from '@/components/InputTextarea'
+import SimpleVueValidation from 'simple-vue-validator'
 
 // imports js
 import './config'
@@ -18,11 +19,13 @@ import 'va/lib/script'
 // imports css
 import './assets/sass/index.scss'
 import 'va/lib/css'
+import 'izitoast/dist/css/iziToast.css'
 
 Vue.config.productionTip = false
 
 Vue.use(Datatable, { locale: locale['vue2-datatable-component'] })
 Vue.use(VueTheMask)
+Vue.use(SimpleVueValidation)
 Vue.component('v-select', vSelect)
 Vue.component('input-textarea', InputTextarea)
 
