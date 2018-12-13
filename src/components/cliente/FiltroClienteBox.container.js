@@ -1,5 +1,5 @@
 import { connect } from 'vuex-connect'
-import FiltroCliente from '@/components/cliente/FiltroCliente'
+import FiltroClienteBox from '@/components/cliente/FiltroClienteBox'
 
 export default connect({
   stateToProps: {
@@ -14,4 +14,4 @@ export default connect({
   actionsToEvents: {
     loadDatatable: 'cliente/loadDatatable'
   }
-})(FiltroCliente)
+})(FiltroClienteBox)
