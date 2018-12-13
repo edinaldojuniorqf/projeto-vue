@@ -33,6 +33,20 @@ export default {
   },
 
   props: {
+    value: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+
+    filter: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+
     title: {
       type: String,
       default: 'Filtro'
@@ -44,12 +58,23 @@ export default {
     }
   },
 
+  created () {
+    this.$emit('input', this.filter)
+  },
+
   methods: {
     handleFilter () {
+      this.$emit('setFilter', { ...this.value })
+      this.$emit('setDatatableOffset', 0)
+      this.$emit('loadDatatable')
       this.$emit('clickFilter')
     },
 
     handleClear () {
+      this.$emit('setFilter', {})
+      this.$emit('input', {})
+      this.$emit('setDatatableOffset', 0)
+      this.$emit('loadDatatable')
       this.$emit('clickClear')
     }
   },
