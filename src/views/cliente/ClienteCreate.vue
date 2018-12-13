@@ -1,16 +1,12 @@
 <template>
   <div class="ClienteCreate">
-    <section class="ClienteCreate__header content-header">
-      <h1>
-        <i class="fa fa-users"></i>
-        Cliente
-      </h1>
-      <div>
-        <button class="btn btn-default" @click="handleVoltarClick">
-          Voltar
-        </button>
+    <Header
+      title="Clinte"
+      icon="fa fa-users">
+      <div slot="actions">
+        <BtnBack @click.native="handleVoltarClick">Voltar</BtnBack>
       </div>
-    </section>
+    </header>
     <section class="content">
       <FormClienteBox />
     </section>
@@ -19,12 +15,16 @@
 
 <script>
 import FormClienteBox from '@/components/cliente/FormClienteBox'
+import Header from '@/components/Header'
+import BtnBack from '@/components/btn/BtnBack'
 
 export default {
   name: 'ClienteCreate',
 
   components: {
-    FormClienteBox
+    FormClienteBox,
+    Header,
+    BtnBack
   },
 
   methods: {
@@ -36,9 +36,4 @@ export default {
 </script>
 
 <style>
-.ClienteCreate__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 </style>

@@ -1,16 +1,13 @@
 <template>
   <div class="Cliente">
-    <section class="Cliente__header content-header">
-      <h1>
-        <i class="fa fa-users"></i>
-        Cliente
-      </h1>
-      <div>
-        <button class="btn btn-success" @click="handleNovoClick">
-          Novo
-        </button>
+    <Header
+      title="Clinte"
+      icon="fa fa-users">
+      <div slot="actions">
+        <BtnNew @click.native="handleNewClick">Novo</BtnNew>
       </div>
-    </section>
+    </header>
+
     <section class="content">
       <FiltroClienteBox />
       <DatatableClienteBox />
@@ -20,6 +17,8 @@
 
 <script>
 import $ from 'jquery'
+import Header from '@/components/Header'
+import BtnNew from '@/components/btn/BtnNew'
 import FiltroClienteBox from '@/components/cliente/FiltroClienteBox'
 import DatatableClienteBox from '@/components/cliente/DatatableClienteBox.container'
 
@@ -27,12 +26,14 @@ export default {
   name: 'Cliente',
 
   components: {
+    Header,
+    BtnNew,
     FiltroClienteBox,
     DatatableClienteBox
   },
 
   methods: {
-    handleNovoClick () {
+    handleNewClick () {
       this.$router.push({ name: 'ClienteCreate' })
     }
   },
@@ -44,9 +45,5 @@ export default {
 </script>
 
 <style>
-.Cliente__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 </style>
