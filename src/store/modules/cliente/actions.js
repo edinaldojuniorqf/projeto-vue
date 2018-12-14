@@ -1,4 +1,4 @@
-import axios from 'axios'
+import clienteApi from '@/api/cliente'
 
 export default {
   async loadDatatable ({ state, commit }) {
@@ -16,11 +16,11 @@ export default {
       cpfCnpj_like: filtro.cpfCnpj
     }
 
-    await axios.get('clientes', { params }).then(res => {
+    await clienteApi.get({ params }).then(res => {
       commit('SET_DATATABLE_TOTAL', parseInt(res.headers['x-total-count']))
       commit('SET_DATATABLE_DATA', res.data)
     }).catch(res => {
-      console.error(res)
+      console.error(res.response)
     })
 
     commit('SET_DATATABLE_LOADING', false)
