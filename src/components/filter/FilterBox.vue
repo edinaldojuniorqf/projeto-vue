@@ -18,8 +18,7 @@
 </template>
 
 <script>
-import $ from 'jquery'
-import VABox from 'va/widgets/VABox'
+import VABox from '@/components/widgets/VABox'
 import BtnFilter from '@/components/btn/BtnFilter'
 import BtnClear from '@/components/btn/BtnClear'
 
@@ -77,10 +76,6 @@ export default {
       this.$emit('loadDatatable')
       this.$emit('clickClear')
     }
-  },
-
-  mounted () {
-    $(this.$el).boxWidget()
   }
 }
 </script>

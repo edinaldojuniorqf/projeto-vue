@@ -7,8 +7,7 @@
 </template>
 
 <script>
-import $ from 'jquery'
-import VABox from 'va/widgets/VABox'
+import VABox from '@/components//widgets/VABox'
 import DatatableCliente from '@/components/datatable/DatatableCliente.container'
 
 export default {
@@ -33,10 +32,6 @@ export default {
         { title: 'CPF/CNPJ', field: 'cpfCnpj' }
       ]
     }
-  },
-
-  mounted () {
-    $(this.$el).boxWidget()
   }
 }
 </script>

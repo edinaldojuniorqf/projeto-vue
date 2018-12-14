@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import $ from 'jquery'
-import VABox from 'va/widgets/VABox'
+import VABox from '@/components/widgets/VABox'
 import FormCliente from '@/components/cliente/FormCliente.container'
 
 export default {
@@ -15,10 +14,6 @@ export default {
   components: {
     VABox,
     FormCliente
-  },
-
-  mounted () {
-    $(this.$el).boxWidget()
   }
 }
 </script>
