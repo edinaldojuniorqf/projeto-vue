@@ -1,5 +1,5 @@
 <template>
-  <VABox class="FilterBox" :title="title" :isLoading="isLoading">
+  <VABox class="FilterBox" :title="title" :isLoading="isLoading" :icon="icon">
     <form slot="content">
       <slot />
       <div class="FilterBox__buttons">
@@ -54,6 +54,11 @@ export default {
     isLoading: {
       type: Boolean,
       default: false
+    },
+
+    icon: {
+      type: String,
+      default: 'fa fa-search'
     }
   },
 

@@ -2,7 +2,10 @@
   <div class="box" :class="[theme, this.isOpen?'':'collapsed-box', isSolid?'box-solid':'']">
     <div class="box-header" :class="(isBorder || isSolid)?'with-border':''">
       <slot name="icon-title"></slot>
-      <h3 class="box-title">{{ title }}</h3>
+      <h3 class="box-title">
+        <i v-if="icon" :class="icon"></i>
+        {{ title }}
+      </h3>
 
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" :data-widget="widgetType"><i :class="btnIcon"></i>
@@ -61,6 +64,9 @@ export default {
     isBorder: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String
     }
   },
   computed: {

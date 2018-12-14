@@ -1,5 +1,5 @@
 <template>
-  <VABox title="Lista de Clientes" :isLoading="loading">
+  <VABox title="Lista de Clientes" :isLoading="loading" icon="fa fa-file-text">
     <DatatableCliente
       :columns="columns"
       slot="content" />
