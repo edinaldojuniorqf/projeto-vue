@@ -3,7 +3,7 @@ export default {
   datatable: {
     data: [],
     total: 0,
-    query: {},
+    query: { sort: 'id', order: 'desc' },
     loading: false
   }
 }
