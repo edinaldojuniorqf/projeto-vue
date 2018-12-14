@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import Header from '@/components/Header'
 import BtnNew from '@/components/btn/BtnNew'
 import FilterBoxCliente from '@/components/cliente/FilterBoxCliente'
@@ -36,10 +35,6 @@ export default {
     handleNewClick () {
       this.$router.push({ name: 'ClienteCreate' })
     }
-  },
-
-  mounted () {
-    $(this.$el).boxWidget()
   }
 }
 </script>
