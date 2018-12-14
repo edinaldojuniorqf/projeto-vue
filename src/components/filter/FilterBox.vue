@@ -89,5 +89,6 @@ export default {
 .FilterBox__buttons {
   display: flex;
   justify-content: flex-end;
+  margin-top: 20px;
 }
 </style>

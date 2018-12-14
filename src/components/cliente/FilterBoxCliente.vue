@@ -19,6 +19,15 @@
           v-mask="[masks.cpf, masks.cnpj]"
           v-model="filter.cpfCnpj" />
       </div>
+
+      <div class="col-sm-4">
+        <label class="control-label" for="field-email">E-mail</label>
+        <input
+          id="field-email"
+          type="email"
+          class="form-control"
+          v-model="filter.email" />
+      </div>
     </div>
   </FilterBox>
 </template>
