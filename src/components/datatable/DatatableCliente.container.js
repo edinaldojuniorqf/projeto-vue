@@ -1,12 +1,11 @@
 import { connect } from 'vuex-connect'
-import DatatableCliente from './DatatableCliente'
+import DatatableDefault from './DatatableDefault'
 
 export default connect({
   stateToProps: {
     data: state => state.cliente.datatable.data,
     query: state => state.cliente.datatable.query,
-    total: state => state.cliente.datatable.total,
-    loading: state => state.cliente.datatable.loading
+    total: state => state.cliente.datatable.total
   },
 
   mutationsToEvents: {
@@ -16,4 +15,4 @@ export default connect({
   actionsToEvents: {
     loadDatatable: 'cliente/loadDatatable'
   }
-})(DatatableCliente)
+})(DatatableDefault)
