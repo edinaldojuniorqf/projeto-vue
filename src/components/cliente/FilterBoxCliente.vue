@@ -28,7 +28,7 @@ import FilterBox from '@/components/filter/FilterBoxCliente.container'
 import masks from '@/util/masks'
 
 export default {
-  name: 'FiltroClienteBox',
+  name: 'FilterBoxCliente',
 
   components: {
     FilterBox

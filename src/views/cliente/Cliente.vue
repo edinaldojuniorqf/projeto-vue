@@ -9,7 +9,7 @@
     </header>
 
     <section class="content">
-      <FiltroClienteBox />
+      <FilterBoxCliente />
       <DatatableClienteBox />
     </section>
   </div>
@@ -19,7 +19,7 @@
 import $ from 'jquery'
 import Header from '@/components/Header'
 import BtnNew from '@/components/btn/BtnNew'
-import FiltroClienteBox from '@/components/cliente/FiltroClienteBox'
+import FilterBoxCliente from '@/components/cliente/FilterBoxCliente'
 import DatatableClienteBox from '@/components/cliente/DatatableClienteBox.container'
 
 export default {
@@ -28,7 +28,7 @@ export default {
   components: {
     Header,
     BtnNew,
-    FiltroClienteBox,
+    FilterBoxCliente,
     DatatableClienteBox
   },
 
