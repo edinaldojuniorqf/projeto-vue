@@ -1,6 +1,15 @@
 .v-select {
   .dropdown-toggle {
     border-radius: 0;
-    height: 34px;
+  }
+}
+
+.v-select.searchable {
+  .dropdown-toggle {
+    .vs__selected-options {
+      input  {
+        height: 24px;
+      }
+    } 
   }
 }
