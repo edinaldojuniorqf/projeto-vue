@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Main from '@/views/layout/Main'
 import Home from '@/views/index/Home'
 import Cliente from '@/views/cliente/Cliente'
-import ClienteCreate from '@/views/cliente/ClienteCreate'
+import ClienteCreate from '@/views/cliente/ClienteCreate.container'
 import Treinamento from '@/views/treinamento/Treinamento'
 
 Vue.use(Router)

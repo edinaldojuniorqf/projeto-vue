@@ -132,6 +132,7 @@ import masks from '@/util/masks'
 import FormAction from '@/components/FormAction'
 import iziToast from 'izitoast'
 import SimpleVueValidation from 'simple-vue-validator'
+import clienteApi from '@/api/cliente'
 
 const Validator = SimpleVueValidation.Validator
 
@@ -176,10 +177,21 @@ export default {
     handleSaveClick () {
       this.$validate().then(success => {
         if (success) {
-          this.$emit('save', this.cliente)
+          clienteApi.save(this.cliente).then(res => {
+            this.$emit('saved')
+            iziToast.success({
+              title: 'Sucesso',
+              message: 'Cadastro realizado com sucesso'
+            })
+          }).catch(res => {
+            console.error('error', res.response)
+            iziToast.error({
+              title: 'Erro',
+              message: 'Houve um erro ao realizar cadastro'
+            })
+          })
         } else {
           iziToast.error({
-            position: 'topCenter',
             title: 'Erro',
             message: this.validation.firstError()
           })

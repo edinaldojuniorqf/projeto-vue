@@ -8,7 +8,7 @@
       </div>
     </header>
     <section class="content">
-      <FormClienteBox />
+      <FormClienteBox @saved="handleSaved" />
     </section>
   </div>
 </template>
@@ -29,6 +29,12 @@ export default {
 
   methods: {
     handleVoltarClick () {
+      this.$router.push({ name: 'Cliente' })
+    },
+
+    handleSaved () {
+      this.$emit('setDatatableOffset', 0)
+      this.$emit('loadDatatable')
       this.$router.push({ name: 'Cliente' })
     }
   }

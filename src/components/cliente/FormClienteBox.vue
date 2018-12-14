@@ -1,6 +1,8 @@
 <template>
   <VABox title="Cadastro de Cliente">
-    <FormCliente slot="content" />
+    <FormCliente
+    slot="content"
+    @saved="hanldeSaved" />
   </VABox>
 </template>
 
@@ -14,6 +16,12 @@ export default {
   components: {
     VABox,
     FormCliente
+  },
+
+  methods: {
+    hanldeSaved () {
+      this.$emit('saved')
+    }
   }
 }
 </script>
