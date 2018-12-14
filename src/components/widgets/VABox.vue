@@ -73,7 +73,7 @@ export default {
       return ''
     }
   },
-  
+
   mounted () {
     $(this.$el).boxWidget()
   }
