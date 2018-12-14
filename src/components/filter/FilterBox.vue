@@ -48,7 +48,7 @@ export default {
 
     title: {
       type: String,
-      default: 'Filtro'
+      default: 'Filtro de Pesquisa'
     },
 
     isLoading: {
